@@ -76,6 +76,7 @@
 .category-televisions .category-product-image{left:20px;right:14px;height:178px}
 .category-commercial-cooling .category-product-image{left:34px;right:22px;height:204px}
 .category-water-heating .category-product-image{left:40px;right:28px;height:204px}
+.hero-video{display:block;background:#eee;object-fit:cover;object-position:center}
 .category-red-line{position:absolute;z-index:5;left:0;bottom:0;width:20%;height:3px;background:#e21b23;transition:width .42s ease}
 .appliance-category-card:hover .category-red-line{width:100%}
 @keyframes category-float{50%{transform:translateY(-4px)}}

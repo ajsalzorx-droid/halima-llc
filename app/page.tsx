@@ -24,7 +24,19 @@ export default function Home() {
         </div>
         <div className="hero-visual" aria-label="Premium home appliances">
           <div className="glow"/>
-          <img className="hero-main" src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=85" alt="Modern premium refrigerator"/>
+          <video
+            className="hero-main hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=85"
+            aria-label="Halima Trading premium appliance showcase"
+          >
+            <source src="/videos/halima-hero.mp4" type="video/mp4" />
+            Your browser does not support embedded video.
+          </video>
           <div className="floating-card top"><span>Commercial & residential</span><b>Cooling solutions</b></div>
           <div className="floating-card bottom"><CheckCircle2 size={19}/><span><b>In stock</b><small>UAE-wide delivery</small></span></div>
         </div>
