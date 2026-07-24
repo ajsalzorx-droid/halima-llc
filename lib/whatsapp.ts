@@ -1,3 +1,3 @@
 import type { CartLine } from "@/context/CartContext";
 export const cartMessage=(items:CartLine[])=>{const lines=items.map((x,i)=>`${i+1}. ${x.name}\nBrand: ${x.brand}\nModel: ${x.model}\nQuantity: ${x.quantity}\nPrice: ${x.price===null?"To be confirmed":`AED ${x.price.toLocaleString()}`}`).join("\n\n");const total=items.reduce((s,x)=>s+(x.price||0)*x.quantity,0);return `Hello Halima Trading,\n\nI would like to place an order for the following products:\n\n${lines}\n\nTotal Items: ${items.reduce((s,x)=>s+x.quantity,0)}\nEstimated Total: AED ${total.toLocaleString()}\n\nCustomer Name:\nPhone Number:\nDelivery Location:\n\nPlease confirm availability and final price.`};
-export const whatsappUrl=(items:CartLine[])=>`https://wa.me/971507623890?text=${encodeURIComponent(cartMessage(items))}`;
+export const whatsappUrl=(items:CartLine[])=>`https://wa.me/971565685090?text=${encodeURIComponent(cartMessage(items))}`;

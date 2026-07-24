@@ -16,7 +16,7 @@ export default function Home() {
           <div className="actions">
             <Link className="btn primary" href="/shop">Shop products <ArrowRight size={18}/></Link>
             <Link className="btn secondary" href="/quote">Request a quote</Link>
-            <a className="text-link" href="https://wa.me/971507623890?text=Hello%20Halima%20Trading%2C%20I%20would%20like%20help%20choosing%20an%20appliance.">Order on WhatsApp</a>
+            <a className="text-link" href="https://wa.me/971565685090?text=Hello%20Halima%20Trading%2C%20I%20would%20like%20help%20choosing%20an%20appliance.">Order on WhatsApp</a>
           </div>
           <div className="trust-row">
             <span><b>1991</b> Established</span><span><b>34+</b> Years of excellence</span><span><b>30+</b> Trusted brands</span>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="cta-band"><div><span className="eyebrow light">Need help choosing?</span><h2>Let’s find the right solution.</h2></div><div className="actions"><Link className="btn white" href="/quote">Request a quotation</Link><a className="btn outline-white" href="tel:+97126725299">Call +971 2 672 5299</a></div></section>
+      <section className="cta-band"><div><span className="eyebrow light">Need help choosing?</span><h2>Let’s find the right solution.</h2></div><div className="actions"><Link className="btn white" href="/quote">Request a quotation</Link><a className="btn outline-white" href="tel:+971565685090">Call +971 56 568 5090</a></div></section>
     </>
   );
 }

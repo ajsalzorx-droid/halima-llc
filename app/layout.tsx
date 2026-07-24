@@ -18,5 +18,5 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}:{children:React.ReactNode}) {
   return <html lang="en"><body className={manrope.variable}><CartProvider><Header/><main>{children}</main><Footer/><FloatingContacts/></CartProvider>
-  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Halima Trading L.L.C.","foundingDate":"1991","telephone":"+971 2 672 5299","email":"halimatradingest@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Al Hamra Plaza Hotel Building, Electra Street","addressLocality":"Abu Dhabi","addressCountry":"AE"}})}}/></body></html>
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Halima Trading L.L.C.","foundingDate":"1991","telephone":"+971 56 568 5090","email":"Halimatradingest@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Al Hamra Plaza Hotel Building, Electra Street","addressLocality":"Abu Dhabi","addressCountry":"AE"}})}}/></body></html>
 }
