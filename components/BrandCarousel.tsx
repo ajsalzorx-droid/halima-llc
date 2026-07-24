@@ -1,0 +1,1 @@
+import {brands}from"@/data/brands";export default function BrandCarousel(){return <section className="brands"><span className="eyebrow">Trusted names in technology</span><div className="marquee"><div>{[...brands,...brands].map((b,i)=><span key={i}>{b}</span>)}</div></div><p>Brand availability varies by product and model. No authorised distributor status is implied.</p></section>}

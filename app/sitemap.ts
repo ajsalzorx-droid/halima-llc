@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function sitemap():MetadataRoute.Sitemap{return["","shop","categories","brands","about","corporate-solutions","cart","quote","contact"].map(x=>({url:`https://halimatrading.ae/${x}`,lastModified:new Date()}))}

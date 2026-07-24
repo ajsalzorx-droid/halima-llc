@@ -1,0 +1,69 @@
+import Link from "next/link";
+import { ArrowRight, Building2, CheckCircle2, Headphones, ShieldCheck, Truck } from "lucide-react";
+import { categories } from "@/data/categories";
+import { products } from "@/data/products";
+import ProductCard from "@/components/ProductCard";
+import BrandCarousel from "@/components/BrandCarousel";
+
+export default function Home() {
+  return (
+    <>
+      <section className="hero">
+        <div className="hero-copy">
+          <span className="eyebrow">Abu Dhabi · Serving the UAE since 1991</span>
+          <h1>Premium appliances.<br/><em>Trusted solutions.</em></h1>
+          <p>Reliable air conditioning, refrigeration, laundry, kitchen and home appliance solutions from trusted global brands.</p>
+          <div className="actions">
+            <Link className="btn primary" href="/shop">Shop products <ArrowRight size={18}/></Link>
+            <Link className="btn secondary" href="/quote">Request a quote</Link>
+            <a className="text-link" href="https://wa.me/971507623890?text=Hello%20Halima%20Trading%2C%20I%20would%20like%20help%20choosing%20an%20appliance.">Order on WhatsApp</a>
+          </div>
+          <div className="trust-row">
+            <span><b>1991</b> Established</span><span><b>34+</b> Years of excellence</span><span><b>30+</b> Trusted brands</span>
+          </div>
+        </div>
+        <div className="hero-visual" aria-label="Premium home appliances">
+          <div className="glow"/>
+          <img className="hero-main" src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=85" alt="Modern premium refrigerator"/>
+          <div className="floating-card top"><span>Commercial & residential</span><b>Cooling solutions</b></div>
+          <div className="floating-card bottom"><CheckCircle2 size={19}/><span><b>In stock</b><small>UAE-wide delivery</small></span></div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-head"><div><span className="eyebrow">Explore the range</span><h2>Solutions for every space</h2></div><Link href="/categories">View all categories <ArrowRight size={17}/></Link></div>
+        <div className="category-grid">
+          {categories.slice(0,8).map((c,i)=><Link className="category-card" href={`/shop?category=${encodeURIComponent(c.name)}`} key={c.name}><span className="cat-num">0{i+1}</span><div className="cat-icon">{c.icon}</div><h3>{c.name}</h3><p>{c.description}</p><span>{c.count} products <ArrowRight size={16}/></span></Link>)}
+        </div>
+      </section>
+
+      <section className="section muted">
+        <div className="section-head"><div><span className="eyebrow">Curated selection</span><h2>Featured products</h2></div><Link href="/shop">Shop all products <ArrowRight size={17}/></Link></div>
+        <div className="product-grid">{products.slice(0,8).map(p=><ProductCard product={p} key={p.id}/>)}</div>
+      </section>
+
+      <section className="solutions section">
+        <div className="solution-copy"><span className="eyebrow">One trusted supply partner</span><h2>Complete appliance solutions for every requirement</h2><p>From a single home appliance to a complete hospitality or government project, our experienced team helps source reliable products that fit your technical requirements, timeline and budget.</p><Link className="btn primary" href="/corporate-solutions">Explore corporate solutions <ArrowRight size={18}/></Link></div>
+        <div className="solution-list">
+          {["Air conditioning solutions","Commercial refrigeration","Laundry solutions","Kitchen appliances","Home & small appliances"].map((x,i)=><div key={x}><span>0{i+1}</span><b>{x}</b><ArrowRight size={18}/></div>)}
+        </div>
+      </section>
+
+      <BrandCarousel/>
+
+      <section className="about-band">
+        <div><span className="eyebrow light">Our story</span><h2>Built on quality.<br/>Driven by commitment.</h2></div>
+        <div><p>Established in 1991, Halima Trading L.L.C. is a leading supplier of premium air conditioning systems, electronics and home appliances in the UAE. We serve retail, commercial, corporate, hospitality, contractor and government clients with reliable products and dedicated service.</p><Link href="/about">Learn about Halima Trading <ArrowRight size={17}/></Link></div>
+      </section>
+
+      <section className="section">
+        <div className="section-head"><div><span className="eyebrow">Why Halima</span><h2>Confidence with every order</h2></div></div>
+        <div className="benefit-grid">
+          {[[ShieldCheck,"34+ years of experience"],[CheckCircle2,"Premium global brands"],[Building2,"Corporate & bulk supply"],[Truck,"Reliable UAE delivery"],[Headphones,"Dedicated after-sales support"]].map(([Icon,label]:any)=><div className="benefit" key={label}><Icon/><b>{label}</b><p>Professional guidance and responsive support from enquiry to delivery.</p></div>)}
+        </div>
+      </section>
+
+      <section className="cta-band"><div><span className="eyebrow light">Need help choosing?</span><h2>Let’s find the right solution.</h2></div><div className="actions"><Link className="btn white" href="/quote">Request a quotation</Link><a className="btn outline-white" href="tel:+97126725299">Call +971 2 672 5299</a></div></section>
+    </>
+  );
+}

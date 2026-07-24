@@ -1,0 +1,1 @@
+export const brands=["O General","Mitsubishi Electric","LG","Samsung","Panasonic","Midea","Carrier","Gree","Haier","Hitachi","Hisense","Toshiba","TCL","Blue Star","Super General","Westpoint","Bosch","Whirlpool","Sharp","Electrolux"];
