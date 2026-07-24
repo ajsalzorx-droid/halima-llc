@@ -65,7 +65,7 @@
 .category-arrow svg{width:17px;transition:transform .3s}
 .appliance-category-card:hover .category-arrow svg{transform:translateX(4px)}
 .category-product-image{position:absolute;left:18px;right:12px;bottom:3px;height:184px;overflow:hidden;z-index:1;filter:drop-shadow(0 13px 12px rgba(0,0,0,.12));transition:transform .45s}
-.category-product-image img{object-fit:contain;object-position:center bottom;animation:category-float 5s ease-in-out infinite}
+.category-product-image img{object-fit:contain!important;object-position:center bottom!important;animation:category-float 5s ease-in-out infinite}
 .appliance-category-card:nth-child(even) .category-product-image img{animation-direction:reverse;animation-duration:5.7s}
 .appliance-category-card:hover .category-product-image{transform:scale(1.04)}
 .category-red-line{position:absolute;z-index:5;left:0;bottom:0;width:20%;height:3px;background:#e21b23;transition:width .42s ease}

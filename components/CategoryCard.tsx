@@ -42,6 +42,8 @@ export default function CategoryCard({
             alt={category.imageAlt}
             sizes="(max-width: 760px) 82vw, (max-width: 1100px) 42vw, 310px"
             priority={index < 4}
+            unoptimized
+            style={{ objectFit: "contain", objectPosition: "center bottom" }}
           />
         </div>
         <span className="category-red-line" />
