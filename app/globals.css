@@ -64,10 +64,18 @@
 .category-arrow{width:34px;height:34px;border-radius:50%;background:#fff0f0;display:grid;place-items:center}
 .category-arrow svg{width:17px;transition:transform .3s}
 .appliance-category-card:hover .category-arrow svg{transform:translateX(4px)}
-.category-product-image{position:absolute;left:18px;right:12px;bottom:3px;height:184px;overflow:hidden;z-index:1;filter:drop-shadow(0 13px 12px rgba(0,0,0,.12));transition:transform .45s}
+.category-product-image{position:absolute;left:15px;right:10px;bottom:4px;height:190px;overflow:visible;z-index:1;filter:drop-shadow(0 12px 10px rgba(0,0,0,.14));transition:transform .45s}
 .category-product-image img{object-fit:contain!important;object-position:center bottom!important;animation:category-float 5s ease-in-out infinite}
 .appliance-category-card:nth-child(even) .category-product-image img{animation-direction:reverse;animation-duration:5.7s}
 .appliance-category-card:hover .category-product-image{transform:scale(1.04)}
+.category-air-conditioning .category-product-image{left:22px;right:22px;height:190px}
+.category-refrigeration .category-product-image{left:32px;right:20px;height:202px}
+.category-laundry .category-product-image{left:18px;right:12px;height:195px}
+.category-kitchen .category-product-image{left:25px;right:18px;height:194px}
+.category-home-small .category-product-image{left:28px;right:22px;height:202px}
+.category-televisions .category-product-image{left:20px;right:14px;height:178px}
+.category-commercial-cooling .category-product-image{left:34px;right:22px;height:204px}
+.category-water-heating .category-product-image{left:40px;right:28px;height:204px}
 .category-red-line{position:absolute;z-index:5;left:0;bottom:0;width:20%;height:3px;background:#e21b23;transition:width .42s ease}
 .appliance-category-card:hover .category-red-line{width:100%}
 @keyframes category-float{50%{transform:translateY(-4px)}}

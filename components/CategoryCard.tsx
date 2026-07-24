@@ -17,7 +17,7 @@ export default function CategoryCard({
 
   return (
     <motion.article
-      className="appliance-category-card"
+      className={`appliance-category-card category-${category.id}`}
       initial={{ opacity: 0, y: 26 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-70px" }}
