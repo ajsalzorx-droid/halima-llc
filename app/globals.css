@@ -82,6 +82,12 @@
 .menu-official-logo{width:270px;height:82px;margin:12px 0 8px}
 .footer-official-logo{width:250px;height:78px;margin-bottom:20px;box-shadow:0 10px 35px #0005}
 @media(max-width:760px){header>.official-logo{width:174px;height:54px}.official-logo img{transform:scale(1.2)}.menu-official-logo{width:250px;height:78px}}
+.brand-marquee{margin:30px 0 25px;overflow:hidden;background:#fff;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.brand-marquee-track{display:flex;align-items:center;width:max-content;animation:brand-strip-marquee 42s linear infinite;will-change:transform}
+.brand-marquee-track img{width:780px;height:60px;flex:0 0 auto;object-fit:cover;mix-blend-mode:multiply}
+.brand-marquee:hover .brand-marquee-track{animation-play-state:paused}
+@keyframes brand-strip-marquee{to{transform:translateX(-50%)}}
+@media(max-width:760px){.brand-marquee-track img{width:624px;height:48px}.brand-marquee-track{animation-duration:34s}}
 .category-red-line{position:absolute;z-index:5;left:0;bottom:0;width:20%;height:3px;background:#e21b23;transition:width .42s ease}
 .appliance-category-card:hover .category-red-line{width:100%}
 @keyframes category-float{50%{transform:translateY(-4px)}}
