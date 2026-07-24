@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Building2, CheckCircle2, Headphones, ShieldCheck, Truck } from "lucide-react";
-import { categories } from "@/data/categories";
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import BrandCarousel from "@/components/BrandCarousel";
@@ -30,11 +29,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-head"><div><span className="eyebrow">Explore the range</span><h2>Solutions for every space</h2></div><Link href="/categories">View all categories <ArrowRight size={17}/></Link></div>
-        <div className="category-grid">
-          {categories.slice(0,8).map((c,i)=><Link className="category-card" href={`/shop?category=${encodeURIComponent(c.name)}`} key={c.name}><span className="cat-num">0{i+1}</span><div className="cat-icon">{c.icon}</div><h3>{c.name}</h3><p>{c.description}</p><span>{c.count} products <ArrowRight size={16}/></span></Link>)}
-        </div>
+      <section className="solutions-image-section">
+        <Link href="/categories" className="solutions-image-link" aria-label="Explore all Halima Trading product categories">
+          <img src="/solutions-every-space.png" alt="Solutions for every space: air conditioning, refrigeration, laundry, kitchen, home appliances, televisions, commercial cooling and water heating"/>
+          <span className="solutions-image-action">Explore categories <ArrowRight size={17}/></span>
+        </Link>
       </section>
 
       <section className="section featured-showcase">
