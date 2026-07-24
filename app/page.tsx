@@ -50,7 +50,7 @@ export default function Home() {
           <h2>Featured <em>Appliances</em></h2>
           <p>Explore reliable cooling, laundry, kitchen and home solutions from trusted global brands.</p>
         </div>
-        <div className="featured-grid">{products.slice(0,8).map(p=><ProductCard product={p} featuredStyle key={p.id}/>)}</div>
+        <div className="featured-grid">{products.filter(p=>p.featured).map(p=><ProductCard product={p} featuredStyle key={p.id}/>)}</div>
         <Link className="featured-all" href="/shop">Explore all products <ArrowRight size={17}/></Link>
       </section>
 
