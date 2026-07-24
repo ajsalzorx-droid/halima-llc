@@ -3,6 +3,7 @@ import { ArrowRight, Building2, CheckCircle2, Headphones, ShieldCheck, Truck } f
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import BrandCarousel from "@/components/BrandCarousel";
+import CategorySolutionsSection from "@/components/CategorySolutionsSection";
 
 export default function Home() {
   return (
@@ -29,12 +30,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="solutions-image-section">
-        <Link href="/categories" className="solutions-image-link" aria-label="Explore all Halima Trading product categories">
-          <img src="/solutions-every-space.png" alt="Solutions for every space: air conditioning, refrigeration, laundry, kitchen, home appliances, televisions, commercial cooling and water heating"/>
-          <span className="solutions-image-action">Explore categories <ArrowRight size={17}/></span>
-        </Link>
-      </section>
+      <CategorySolutionsSection />
 
       <section className="section featured-showcase">
         <div className="featured-heading">
