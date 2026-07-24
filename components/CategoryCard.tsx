@@ -35,19 +35,12 @@ export default function CategoryCard({
           {category.productCount} products
           <span className="category-arrow"><ArrowRight aria-hidden="true" /></span>
         </span>
-        <div
-          className="category-product-crop"
-          style={{
-            "--crop-x": `${category.crop.x}px`,
-            "--crop-y": `${category.crop.y}px`,
-          } as React.CSSProperties}
-        >
+        <div className="category-product-image">
           <Image
             src={category.image}
-            width={1536}
-            height={1280}
+            fill
             alt={category.imageAlt}
-            sizes="1536px"
+            sizes="(max-width: 760px) 82vw, (max-width: 1100px) 42vw, 310px"
             priority={index < 4}
           />
         </div>

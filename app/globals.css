@@ -64,10 +64,10 @@
 .category-arrow{width:34px;height:34px;border-radius:50%;background:#fff0f0;display:grid;place-items:center}
 .category-arrow svg{width:17px;transition:transform .3s}
 .appliance-category-card:hover .category-arrow svg{transform:translateX(4px)}
-.category-product-crop{position:absolute;left:22px;right:10px;bottom:0;height:178px;overflow:hidden;z-index:1;filter:drop-shadow(0 13px 12px rgba(0,0,0,.12));transition:transform .45s}
-.category-product-crop img{position:absolute;width:1536px!important;max-width:none!important;height:1280px!important;left:calc(var(--crop-x) * -1);top:calc(var(--crop-y) * -1);object-fit:none;animation:category-float 5s ease-in-out infinite}
-.appliance-category-card:nth-child(even) .category-product-crop img{animation-direction:reverse;animation-duration:5.7s}
-.appliance-category-card:hover .category-product-crop{transform:scale(1.04)}
+.category-product-image{position:absolute;left:18px;right:12px;bottom:3px;height:184px;overflow:hidden;z-index:1;filter:drop-shadow(0 13px 12px rgba(0,0,0,.12));transition:transform .45s}
+.category-product-image img{object-fit:contain;object-position:center bottom;animation:category-float 5s ease-in-out infinite}
+.appliance-category-card:nth-child(even) .category-product-image img{animation-direction:reverse;animation-duration:5.7s}
+.appliance-category-card:hover .category-product-image{transform:scale(1.04)}
 .category-red-line{position:absolute;z-index:5;left:0;bottom:0;width:20%;height:3px;background:#e21b23;transition:width .42s ease}
 .appliance-category-card:hover .category-red-line{width:100%}
 @keyframes category-float{50%{transform:translateY(-4px)}}
@@ -77,5 +77,5 @@
 .category-trust-item>span{flex:0 0 auto;width:58px;height:58px;border-radius:50%;background:#fff0f0;color:#e21b23;display:grid;place-items:center}
 .category-trust-item svg{width:29px;height:29px}
 .category-trust-item b{font-size:14px}.category-trust-item p{font-size:12px;line-height:1.5;color:#777;margin:5px 0 0}
-@media(max-width:1100px){.category-solutions-section{padding-inline:24px}.appliance-category-grid{grid-template-columns:repeat(2,1fr)}.category-trust-strip{grid-template-columns:repeat(2,1fr);gap:22px 0}.category-trust-item:nth-child(2){border-right:0}.category-product-crop{left:30px}}
-@media(max-width:760px){.category-solutions-section{padding:70px 16px 58px}.category-solutions-head{display:block}.category-solutions-head h2{font-size:36px}.category-solutions-head>div>p{font-size:15px}.category-view-all{margin-top:24px;width:100%}.appliance-category-grid{grid-template-columns:1fr;gap:14px}.appliance-category-card{min-height:380px}.appliance-category-card>a{padding:23px}.appliance-category-card h3{font-size:22px;margin-top:18px}.category-product-crop{height:160px;left:12px}.category-trust-strip{grid-template-columns:1fr;padding:8px 20px}.category-trust-item{border-right:0;border-bottom:1px solid #e7e7e7;padding:18px 4px}.category-trust-item:last-child{border-bottom:0}}
+@media(max-width:1100px){.category-solutions-section{padding-inline:24px}.appliance-category-grid{grid-template-columns:repeat(2,1fr)}.category-trust-strip{grid-template-columns:repeat(2,1fr);gap:22px 0}.category-trust-item:nth-child(2){border-right:0}.category-product-image{left:30px}}
+@media(max-width:760px){.category-solutions-section{padding:70px 16px 58px}.category-solutions-head{display:block}.category-solutions-head h2{font-size:36px}.category-solutions-head>div>p{font-size:15px}.category-view-all{margin-top:24px;width:100%}.appliance-category-grid{grid-template-columns:1fr;gap:14px}.appliance-category-card{min-height:380px}.appliance-category-card>a{padding:23px}.appliance-category-card h3{font-size:22px;margin-top:18px}.category-product-image{height:166px;left:12px}.category-trust-strip{grid-template-columns:1fr;padding:8px 20px}.category-trust-item{border-right:0;border-bottom:1px solid #e7e7e7;padding:18px 4px}.category-trust-item:last-child{border-bottom:0}}
